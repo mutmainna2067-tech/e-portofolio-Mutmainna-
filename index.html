@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-Portofolio Language Testing | Mutmainna</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--green:#d9f3d2;
+--green2:#b9e8c5;
+--blue:#dff4ff;
+--pink:#ffe6ef;
+--cream:#fff8df;
+--purple:#efe6ff;
+--white:rgba(255,255,255,.60);
+
+--shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+body{
+
+font-family:'Quicksand',sans-serif;
+background:linear-gradient(#d9f5ff,#fdfcf4);
+overflow-x:hidden;
+color:#4d5b4d;
+
+}
+
+/* SCROLL */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#acd7aa;
+border-radius:30px;
+
+}
+
+/* HERO */
+
+.hero{
+
+position:relative;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+
+background:
+linear-gradient(rgba(255,255,255,.25),
+rgba(255,255,255,.25)),
+
+linear-gradient(to bottom,
+#aee3ff 0%,
+#dff5ff 35%,
+#f7f8df 75%,
+#dff0c8 100%);
+
+}
+
+/* SUN */
+
+.sun{
+
+position:absolute;
+top:70px;
+right:120px;
+
+width:120px;
+height:120px;
+
+border-radius:50%;
+
+background:#fff9b1;
+
+box-shadow:
+0 0 40px #fff9b1,
+0 0 90px #fff7ad;
+
+}
+
+/* CLOUD */
+
+.cloud{
+
+position:absolute;
+
+background:white;
+
+border-radius:100px;
+
+opacity:.8;
+
+animation:cloud 45s linear infinite;
+
+}
+
+.cloud::before{
+
+content:'';
+
+position:absolute;
+
+background:white;
+
+width:80px;
+height:80px;
+
+left:15px;
+top:-30px;
+
+border-radius:50%;
+
+}
+
+.cloud::after{
+
+content:'';
+
+position:absolute;
+
+background:white;
+
+width:70px;
+height:70px;
+
+right:15px;
+top:-25px;
+
+border-radius:50%;
+
+}
+
+.cloud1{
+
+width:180px;
+height:60px;
+
+top:80px;
+left:-250px;
+
+animation-duration:50s;
+
+}
+
+.cloud2{
+
+width:150px;
+height:55px;
+
+top:180px;
+left:-300px;
+
+animation-duration:65s;
+
+animation-delay:5s;
+
+}
+
+@keyframes cloud{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(1700px);
+
+}
+
+}
+
+/* FLOATING FLOWERS */
+
+.flower{
+
+position:absolute;
+
+font-size:22px;
+
+animation:floatFlower 8s ease-in-out infinite;
+
+opacity:.8;
+
+}
+
+.f1{
+
+left:8%;
+bottom:15%;
+
+}
+
+.f2{
+
+left:18%;
+bottom:25%;
+
+animation-delay:2s;
+
+}
+
+.f3{
+
+right:10%;
+bottom:20%;
+
+animation-delay:3s;
+
+}
+
+.f4{
+
+right:18%;
+bottom:10%;
+
+animation-delay:5s;
+
+}
+
+@keyframes floatFlower{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+
+text-align:center;
+z-index:5;
+padding:30px;
+
+}
+
+.hero-content h1{
+
+font-family:'Mochiy Pop One',sans-serif;
+
+font-size:55px;
+
+line-height:1.3;
+
+color:#49644b;
+
+text-shadow:3px 3px rgba(255,255,255,.7);
+
+}
+
+.hero-content p{
+
+margin-top:18px;
+
+font-size:22px;
+
+color:#5d755f;
+
+font-weight:600;
+
+}
+
+.hero-content span{
+
+display:block;
+
+margin-top:8px;
+
+font-size:17px;
+
+}
+
+/* BUTTON */
+
+.btn{
+
+display:inline-block;
+
+margin-top:40px;
+
+padding:16px 38px;
+
+background:linear-gradient(45deg,#a9e7b7,#cdeecb);
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+color:#3b5d3d;
+
+box-shadow:var(--shadow);
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-6px);
+
+}
+
+/* NAVBAR */
+
+nav{
+
+position:fixed;
+
+top:15px;
+left:50%;
+
+transform:translateX(-50%);
+
+width:92%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 35px;
+
+background:rgba(255,255,255,.35);
+
+backdrop-filter:blur(15px);
+
+border-radius:50px;
+
+z-index:999;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+font-family:'Mochiy Pop One';
+
+color:#507652;
+
+font-size:18px;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:25px;
+
+list-style:none;
+
+}
+
+nav a{
+
+text-decoration:none;
+
+color:#5f6d5f;
+
+font-weight:700;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#6ca76f;
+
+}
+
+/* SECTION */
+
+section{
+
+padding:90px 10%;
+
+}
+
+.title{
+
+font-family:'Mochiy Pop One';
+
+font-size:34px;
+
+margin-bottom:35px;
+
+text-align:center;
+
+color:#507652;
+
+}
+
+/* PROFILE */
+
+.profile{
+
+display:grid;
+
+grid-template-columns:300px 1fr;
+
+gap:45px;
+
+align-items:center;
+
+}
+
+.photo{
+
+background:linear-gradient(145deg,#fff,#ffe9f3);
+
+padding:18px;
+
+border-radius:35px;
+
+box-shadow:var(--shadow);
+
+transform:rotate(-3deg);
+
+}
+
+.photo img{
+
+width:100%;
+
+border-radius:25px;
+
+display:block;
+
+}
+
+.info{
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(12px);
+
+padding:35px;
+
+border-radius:35px;
+
+box-shadow:var(--shadow);
+
+}
+
+.info h2{
+
+font-family:'Mochiy Pop One';
+
+color:#568259;
+
+margin-bottom:18px;
+
+}
+
+.info table{
+
+width:100%;
+
+line-height:2;
+
+margin-bottom:25px;
+
+}
+
+.about{
+
+background:linear-gradient(45deg,var(--pink),var(--cream));
+
+padding:25px;
+
+border-radius:25px;
+
+line-height:1.9;
+
+}
+
+/* BUBBLE CARD */
+
+.card{
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(15px);
+
+padding:35px;
+
+border-radius:35px;
+
+margin-top:30px;
+
+box-shadow:var(--shadow);
+
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.pink{
+
+background:linear-gradient(145deg,#ffe9ef,#fff8fd);
+
+}
+
+.blue{
+
+background:linear-gradient(145deg,#def5ff,#ffffff);
+
+}
+
+.green{
+
+background:linear-gradient(145deg,#dff6d7,#ffffff);
+
+}
+
+.purple{
+
+background:linear-gradient(145deg,#efe7ff,#ffffff);
+
+}
+
+.cream{
+
+background:linear-gradient(145deg,#fff7d8,#ffffff);
+
+}
+
+.card h3{
+
+font-family:'Mochiy Pop One';
+
+margin-bottom:18px;
+
+color:#56775c;
+
+}
+
+.card p{
+
+line-height:2;
+
+text-align:justify;
+
+}
+
+/* GRID */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+}
+
+/* ANIMATION */
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(60px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+@media(max-width:900px){
+
+.profile{
+
+grid-template-columns:1fr;
+
+}
+
+.hero-content h1{
+
+font-size:38px;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+
+🌿 Mutmainna
+
+</div>
+
+<ul>
+
+<li><a href="#profil">Profil</a></li>
+
+<li><a href="#materi">Materi</a></li>
+
+<li><a href="#presentasi">Presentasi</a></li>
+
+<li><a href="#contoh">Contoh Soal</a></li>
+
+<li><a href="#refleksi">Refleksi</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="sun"></div>
+
+<div class="cloud cloud1"></div>
+
+<div class="cloud cloud2"></div>
+
+<div class="flower f1">🌸</div>
+<div class="flower f2">🌼</div>
+<div class="flower f3">🌿</div>
+<div class="flower f4">🍀</div>
+
+<div class="hero-content">
+
+<h1>
+
+E-Portfolio<br>
+
+Language Testing
+
+</h1>
+
+<p>
+
+Mutmainna
+
+<span>
+
+2401404011 • Pendidikan Bahasa Inggris • Kelas 4A
+
+</span>
+
+</p>
+
+<a href="#profil" class="btn">
+
+Explore Portfolio 🌸
+
+</a>
+
+</div>
+
+</header>
+
+<!-- ==========================
+PART 1 SELESAI
+Balas "part 2"
+Aku lanjutkan Profil + Ringkasan Materi
+dengan desain yang lebih cantik lagi.
+=========================== -->
+<!-- ===========================================
+PART 2
+(PROFIL + RINGKASAN MATERI)
+Tempel tepat setelah </header>
+============================================ -->
+
+<section id="profil">
+
+<h2 class="title hidden">
+🌸 Profil Mahasiswa
+</h2>
+
+<div class="profile hidden">
+
+<div class="photo">
+
+<!-- Ganti src dengan foto kamu -->
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80"
+alt="Foto Profil">
+
+</div>
+
+<div class="info">
+
+<h2>🌿 Biodata</h2>
+
+<table>
+
+<tr>
+<td><b>Nama</b></td>
+<td>: Mutmainna</td>
+</tr>
+
+<tr>
+<td><b>NIM</b></td>
+<td>: 2401404011</td>
+</tr>
+
+<tr>
+<td><b>Kelas</b></td>
+<td>: 4A</td>
+</tr>
+
+<tr>
+<td><b>Program Studi</b></td>
+<td>: Pendidikan Bahasa Inggris</td>
+</tr>
+
+</table>
+
+<div class="about">
+
+<p>
+
+Perkenalkan nama saya <b>Mutmainna</b>, akrab disapa
+<b>Mutma</b>, mahasiswa semester 4 Program Studi Pendidikan
+Bahasa Inggris Universitas Cokroaminoto Palopo.
+
+Saya percaya bahwa proses pembelajaran seharusnya
+berlangsung secara menarik, interaktif, dan bermakna.
+
+Saya senang mengeksplorasi bahasa baru serta
+mengembangkan berbagai ide menjadi pengalaman belajar
+yang dapat diterapkan di kelas.
+
+Bagi saya, setiap proyek yang saya kerjakan merupakan
+kesempatan untuk berkembang, baik secara pribadi maupun
+profesional.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =============================== -->
+
+<section id="materi">
+
+<h2 class="title hidden">
+
+📚 Ringkasan Materi
+
+</h2>
+
+<!-- CARD 1 -->
+
+<div class="card green hidden">
+
+<h3>
+
+🌿 Tujuan dan Jenis Tes Bahasa
+
+</h3>
+
+<p>
+
+Tes merupakan alat untuk mengukur kemampuan atau
+pengetahuan siswa.
+
+Tes bahasa bertujuan untuk mengukur pengetahuan,
+keterampilan, kemampuan, maupun karakteristik individu
+secara objektif dan terstandarisasi.
+
+Adapun jenis-jenis tes bahasa meliputi:
+
+<br><br>
+
+🌸 <b>Tes Seleksi</b> digunakan untuk menentukan diterima
+atau tidaknya seseorang dalam suatu program.
+
+<br><br>
+
+🌸 <b>Tes Penempatan</b> digunakan untuk menempatkan
+peserta didik sesuai tingkat kemampuannya.
+
+<br><br>
+
+🌸 <b>Tes Hasil Belajar</b> digunakan untuk mengetahui hasil
+pengajaran secara keseluruhan pada akhir proses
+pembelajaran.
+
+<br><br>
+
+🌸 <b>Tes Diagnostik</b> bertujuan menemukan kesulitan
+belajar yang dialami siswa sehingga guru dapat memberikan
+solusi yang tepat.
+
+<br><br>
+
+🌸 <b>Tes Uji Coba</b> digunakan untuk mengetahui apakah
+instrumen tes yang dikembangkan sudah layak digunakan.
+
+</p>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card pink hidden">
+
+<h3>
+
+🌸 Tes Objektif dan Tes Subjektif
+
+</h3>
+
+<p>
+
+Tes objektif merupakan tes yang memiliki jawaban benar
+yang sudah pasti sehingga proses penskorannya tidak
+dipengaruhi oleh penilai.
+
+Peserta yang memberikan jawaban yang sama akan
+memperoleh skor yang sama.
+
+<br><br>
+
+<b>Bentuk tes objektif:</b>
+
+<br>
+
+• Multiple Choice
+
+<br>
+
+• True-False
+
+<br>
+
+• Matching
+
+<br>
+
+• Short Answer
+
+<br><br>
+
+Tes subjektif merupakan tes yang memerlukan
+pertimbangan penilai karena jawabannya dapat
+bervariasi.
+
+Oleh sebab itu, penskoran biasanya menggunakan rubrik
+agar hasil penilaian lebih konsisten.
+
+<br><br>
+
+<b>Bentuk tes subjektif:</b>
+
+<br>
+
+• Essay
+
+<br>
+
+• Speaking
+
+<br>
+
+• Writing
+
+</p>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card blue hidden">
+
+<h3>
+
+☁️ Kriteria Tes yang Baik
+
+</h3>
+
+<p>
+
+Suatu tes dikatakan baik apabila memenuhi lima
+kriteria utama.
+
+<br><br>
+
+✨ <b>Validitas</b>
+
+Mengukur apa yang memang seharusnya diukur.
+
+<br><br>
+
+✨ <b>Reliabilitas</b>
+
+Memberikan hasil yang konsisten ketika digunakan.
+
+<br><br>
+
+✨ <b>Praktikalitas</b>
+
+Mudah disusun, digunakan, dan diperiksa.
+
+<br><br>
+
+✨ <b>Keaslian (Authenticity)</b>
+
+Mencerminkan penggunaan bahasa dalam kehidupan nyata.
+
+<br><br>
+
+✨ <b>Washback Effect</b>
+
+Memberikan dampak positif terhadap proses belajar
+mengajar.
+
+</p>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card cream hidden">
+
+<h3>
+
+📖 Prosedur Penyusunan Tes
+
+</h3>
+
+<p>
+
+Penyusunan tes diawali dengan menentukan tujuan
+penilaian serta kompetensi yang akan diukur.
+
+Selanjutnya disusun kisi-kisi sebagai pedoman dalam
+penulisan soal.
+
+Kemudian dikembangkan butir soal sesuai indikator
+pembelajaran.
+
+Setelah selesai, soal ditelaah serta direvisi apabila
+masih terdapat kekurangan.
+
+Soal kemudian diujicobakan untuk mengetahui kualitasnya.
+
+Hasil uji coba dianalisis berdasarkan validitas,
+reliabilitas, tingkat kesukaran, serta daya pembeda.
+
+Instrumen yang telah memenuhi seluruh kriteria
+kemudian digunakan sebagai alat evaluasi pembelajaran.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =======================================
+PART 2 SELESAI
+
+Menurutku tampilannya sudah mulai kelihatan seperti
+digital journal.
+
+Di Part 3 nanti aku akan bikin:
+
+🌿 Dokumentasi Presentasi
+✨ Card lebih aesthetic
+🎤 Button lucu
+🖼 Layout dua kolom
+🌸 Materi Kelompok
+📷 Dokumentasi
+🔗 Tombol Google Drive
+
+Dan tampilannya bakal lebih cantik lagi daripada
+section sebelumnya.
+
+======================================= -->
+<!-- ==========================================================
+PART 3
+(DOKUMENTASI PRESENTASI + MATERI KELOMPOK)
+Tempel tepat setelah penutup </section> pada Part 2
+========================================================== -->
+
+<section id="presentasi">
+
+<h2 class="title hidden">
+🎤 Dokumentasi Presentasi Kelompok
+</h2>
+
+<div class="grid">
+
+<div class="card purple hidden">
+
+<h3>👥 Kelompok 2 — Testing Speaking</h3>
+
+<p>
+
+<b>Anggota Kelompok</b>
+
+<br><br>
+
+🌸 Mutmainna (2401404011)
+
+<br>
+
+🌸 M. Wildan Ramadhan (2401404016)
+
+<br>
+
+🌸 Natasya Florina (2401404018)
+
+<br>
+
+🌸 Aisyah Esma Ihfadila (2401404024)
+
+</p>
+
+</div>
+
+<div class="card blue hidden">
+
+<h3>📚 Materi yang Dipresentasikan</h3>
+
+<p>
+
+Speaking Test merupakan tes yang digunakan untuk
+mengukur kemampuan peserta didik dalam
+berkomunikasi secara lisan menggunakan bahasa
+Inggris.
+
+Tes ini bertujuan mengetahui kemampuan berbicara
+siswa baik untuk penempatan, diagnosis,
+evaluasi hasil belajar, maupun mengukur
+kemahiran berbahasa.
+
+Aspek yang dinilai meliputi:
+
+<br><br>
+
+✔ Pronunciation
+
+<br>
+
+✔ Fluency
+
+<br>
+
+✔ Grammar
+
+<br>
+
+✔ Vocabulary
+
+<br>
+
+✔ Comprehension
+
+<br>
+
+✔ Confidence & Interaction
+
+<br><br>
+
+Bentuk tes yang umum digunakan antara lain:
+
+Interview,
+Role Play,
+Picture Description,
+Storytelling,
+dan Presentation.
+
+Penilaian dapat menggunakan
+<b>Holistic Rubric</b>
+maupun
+<b>Analytical Rubric</b>.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- BUTTON -->
+
+<div style="margin-top:40px;text-align:center;">
+
+<a class="btn"
+href="https://docs.google.com/document/d/1QYsUxlUbv1qGj3BT0-S6DIiIS5uYpImw/edit"
+target="_blank">
+
+📖 Lihat Materi Presentasi
+
+</a>
+
+<a class="btn"
+style="margin-left:15px;"
+href="https://drive.google.com/file/d/1M8odmYIFRnPycgm0020JW8psWKZMj8AT/view?usp=drive_link"
+target="_blank">
+
+🖥 Slide Presentasi
+
+</a>
+
+<a class="btn"
+style="margin-left:15px;"
+href="https://drive.google.com/file/d/1CVnZMZYEMIwr96wYSiGxxJBkmubhRdUL/view?usp=drive_link"
+target="_blank">
+
+📷 Dokumentasi
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ======================================= -->
+
+<section>
+
+<h2 class="title hidden">
+
+🌼 Catatan Singkat Materi Kelompok Lain
+
+</h2>
+
+<div class="grid">
+
+<!-- WRITING -->
+
+<div class="card pink hidden">
+
+<h3>
+
+✍ Testing Writing
+
+</h3>
+
+<p>
+
+Testing Writing merupakan tes yang digunakan untuk
+mengukur kemampuan siswa dalam menyampaikan ide,
+pendapat, pengalaman, atau informasi dalam bentuk
+tulisan secara jelas dan terstruktur.
+
+Penilaian writing tidak hanya berfokus pada isi
+tulisan, tetapi juga pada organisasi, tata bahasa,
+kosakata, mekanik penulisan, serta koherensi dan
+kohesi antaride.
+
+Jenis tes yang digunakan meliputi paragraph writing,
+essay writing, descriptive text, narrative text,
+serta letter atau email writing.
+
+Bentuk soal dapat berupa penulisan paragraf, esai,
+teks deskriptif, naratif, maupun surat sesuai tujuan
+pembelajaran.
+
+</p>
+
+</div>
+
+<!-- LISTENING -->
+
+<div class="card blue hidden">
+
+<h3>
+
+🎧 Listening Testing
+
+</h3>
+
+<p>
+
+Listening Testing bertujuan mengukur kemampuan siswa
+dalam memahami informasi yang disampaikan secara
+lisan melalui percakapan, monolog, maupun instruksi.
+
+Tes ini mengukur kemampuan memahami ide pokok,
+informasi rinci, makna tersirat,
+serta tujuan pembicara.
+
+Jenis tes yang digunakan adalah
+Listening Comprehension Test.
+
+Bentuk soal yang umum digunakan:
+
+<br><br>
+
+✔ Multiple Choice
+
+<br>
+
+✔ True / False
+
+<br>
+
+✔ Short Answer
+
+<br>
+
+✔ Matching
+
+<br>
+
+✔ Fill in the Blank
+
+<br>
+
+✔ Note Taking
+
+</p>
+
+</div>
+
+<!-- READING -->
+
+<div class="card green hidden">
+
+<h3>
+
+📖 Reading Testing
+
+</h3>
+
+<p>
+
+Reading Testing digunakan untuk mengukur kemampuan
+memahami serta menginterpretasikan teks tertulis.
+
+Kemampuan yang dinilai meliputi:
+
+<br><br>
+
+✔ menemukan ide pokok
+
+<br>
+
+✔ informasi rinci
+
+<br>
+
+✔ makna tersirat
+
+<br>
+
+✔ makna kosakata berdasarkan konteks
+
+<br>
+
+✔ referensi kata
+
+<br>
+
+✔ struktur teks
+
+<br><br>
+
+Jenis tes yang digunakan adalah
+Reading Comprehension Test.
+
+Bentuk soal dapat berupa Multiple Choice,
+True/False,
+Matching Heading,
+Short Answer,
+Cloze Test,
+dan Summary Completion.
+
+</p>
+
+</div>
+
+<!-- VOCAB -->
+
+<div class="card cream hidden">
+
+<h3>
+
+📝 Vocabulary Testing
+
+</h3>
+
+<p>
+
+Vocabulary Testing bertujuan mengukur penguasaan
+kosakata siswa baik dari segi makna maupun
+penggunaannya dalam konteks.
+
+Aspek yang dinilai meliputi:
+
+Meaning,
+Synonym,
+Antonym,
+Word Form,
+Word Use in Context,
+dan Collocation.
+
+Jenis tes yang digunakan adalah
+Vocabulary Test.
+
+Bentuk soal antara lain:
+
+Multiple Choice,
+Matching,
+Fill in the Blank,
+Synonym Test,
+Antonym Test,
+Word Formation,
+serta Using Words in Sentences.
+
+</p>
+
+</div>
+
+<!-- GRAMMAR -->
+
+<div class="card purple hidden">
+
+<h3>
+
+📚 Grammar Testing
+
+</h3>
+
+<p>
+
+Grammar Testing digunakan untuk mengukur kemampuan
+menggunakan tata bahasa Inggris secara benar sesuai
+konteks.
+
+Tes berfokus pada ketepatan penggunaan:
+
+<br><br>
+
+✔ Tenses
+
+<br>
+
+✔ Subject Verb Agreement
+
+<br>
+
+✔ Word Order
+
+<br>
+
+✔ Bentuk Kata
+
+<br>
+
+✔ Struktur Kalimat
+
+<br><br>
+
+Jenis tes yang digunakan adalah
+Grammar Test.
+
+Bentuk soal yang umum digunakan meliputi:
+
+Multiple Choice,
+Error Recognition,
+Fill in the Blank,
+Sentence Transformation,
+Sentence Arrangement,
+serta Editing (Error Correction).
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ====================================================
+
+PART 3 SELESAI
+
+Part 4 nanti berisi:
+
+🌸 Contoh Soal (6 kartu interaktif)
+
+🌿 Lampiran
+
+🌙 Refleksi dengan background malam
+
+✨ Footer aesthetic
+
+☁ JavaScript animasi
+
+💖 Back To Top
+
+dan website hampir selesai.
+
+==================================================== -->
+<!-- ==========================================================
+PART 4
+(CONTOH SOAL • REFLEKSI • LAMPIRAN • FOOTER • JAVASCRIPT)
+Tempel tepat setelah penutup </section> pada Part 3
+========================================================== -->
+
+<section id="contoh">
+
+<h2 class="title hidden">
+
+📂 Kumpulan Contoh Soal Individu
+
+</h2>
+
+<div class="grid">
+
+<div class="card pink hidden">
+
+<h3>🎧 Listening Test</h3>
+
+<p>
+Kumpulan contoh soal Listening Test yang digunakan
+untuk mengukur kemampuan menyimak peserta didik.
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1bFL_Fefi0FT--UTIJO1NqyRnRZMrlap1">
+
+Buka Folder
+
+</a>
+
+</div>
+
+<div class="card blue hidden">
+
+<h3>🎤 Speaking Test</h3>
+
+<p>
+
+Berisi contoh instrumen Speaking Test yang dapat
+digunakan untuk mengukur kemampuan komunikasi
+lisan peserta didik.
+
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1wD2RdDz8uifXgUxA8RNKRBW45EBTFKlS">
+
+Buka Folder
+
+</a>
+
+</div>
+
+<div class="card green hidden">
+
+<h3>📖 Reading Test</h3>
+
+<p>
+
+Kumpulan contoh Reading Test untuk mengukur
+kemampuan memahami teks bacaan.
+
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1mFLRaa3MeIXRIu-VZuGPG8kVLqqJ1KSZ">
+
+Buka Folder
+
+</a>
+
+</div>
+
+<div class="card cream hidden">
+
+<h3>✍ Writing Test</h3>
+
+<p>
+
+Contoh instrumen penilaian Writing Test sesuai
+tujuan pembelajaran bahasa Inggris.
+
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1GP25gQ6p-JLM8ZEn80Z2twiogZ6tbMjc">
+
+Buka Folder
+
+</a>
+
+</div>
+
+<div class="card purple hidden">
+
+<h3>📝 Vocabulary Test</h3>
+
+<p>
+
+Contoh soal Vocabulary Test untuk mengukur
+penguasaan kosakata siswa.
+
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1judAdkHKmutSyemJZ9B864mlW98-h1r0">
+
+Buka Folder
+
+</a>
+
+</div>
+
+<div class="card blue hidden">
+
+<h3>📚 Grammar Test</h3>
+
+<p>
+
+Berisi contoh Grammar Test untuk mengukur
+pemahaman struktur bahasa Inggris.
+
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1daYVWUfWDUCqr49uVI1L9dlykHTx1dLk">
+
+Buka Folder
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =============================================== -->
+
+<section id="refleksi">
+
+<h2 class="title hidden">
+
+🌙 Refleksi Pembelajaran
+
+</h2>
+
+<div class="card hidden"
+style="
+background:linear-gradient(135deg,#dfefff,#f8f4ff,#fff6df);
+border:2px dashed #cfdcc5;
+">
+
+<h3>✨ Refleksi</h3>
+
+<p>
+
+Melalui mata kuliah Language Testing saya memperoleh
+pemahaman baru mengenai konsep dasar evaluasi
+pembelajaran bahasa Inggris.
+
+Saya memahami bahwa penyusunan tes tidak hanya
+sekadar membuat soal, tetapi harus memperhatikan
+tujuan penilaian, validitas, reliabilitas,
+praktikalitas, keaslian, serta dampak tes terhadap
+proses pembelajaran.
+
+Selain itu, kegiatan presentasi kelompok memberikan
+kesempatan kepada saya untuk belajar bekerja sama,
+berdiskusi, serta melatih kemampuan berbicara di
+depan kelas.
+
+Dari presentasi kelompok lain saya juga memperoleh
+wawasan mengenai berbagai bentuk tes bahasa,
+mulai dari Listening, Speaking, Reading, Writing,
+Vocabulary hingga Grammar Testing.
+
+Seluruh materi tersebut memberikan pemahaman bahwa
+setiap keterampilan bahasa memiliki karakteristik
+penilaian yang berbeda sehingga bentuk tes yang
+digunakan pun harus disesuaikan dengan kompetensi
+yang ingin diukur.
+
+Melalui penyusunan e-portofolio ini saya dapat
+mendokumentasikan seluruh proses pembelajaran
+sekaligus merefleksikan perkembangan pengetahuan
+yang telah saya peroleh selama mengikuti mata
+kuliah Language Testing.
+
+Saya berharap pengetahuan yang diperoleh dapat
+menjadi bekal dalam merancang instrumen evaluasi
+bahasa Inggris yang valid, menarik, dan bermakna
+ketika menjadi pendidik di masa mendatang.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =============================================== -->
+
+<section>
+
+<h2 class="title hidden">
+
+📎 Lampiran
+
+</h2>
+
+<div class="card cream hidden"
+style="text-align:center;">
+
+<h3>
+
+📂 Dokumentasi dan Lampiran
+
+</h3>
+
+<p>
+
+Klik tombol di bawah untuk melihat seluruh
+dokumen pendukung e-portofolio.
+
+</p>
+
+<br>
+
+<a class="btn"
+target="_blank"
+href="https://drive.google.com/drive/folders/1avNQvK7P0O8hOeYy0k5cvMT8q3C0-Q6a">
+
+Buka Lampiran
+
+</a>
+
+</div>
+
+</section>
+
+<!-- =============================================== -->
+
+<footer
+style="
+margin-top:80px;
+padding:60px 20px;
+text-align:center;
+background:linear-gradient(
+180deg,
+#cfe8d2,
+#b9d7c0
+);
+border-top-left-radius:60px;
+border-top-right-radius:60px;
+">
+
+<h2
+style="
+font-family:'Mochiy Pop One';
+color:#4d6b52;
+">
+
+🌿 Thank You 🌿
+
+</h2>
+
+<p
+style="
+margin-top:18px;
+font-size:18px;
+line-height:2;
+">
+
+"Every learning journey begins with curiosity,
+grows with perseverance,
+and blossoms through meaningful experiences."
+
+</p>
+
+<br>
+
+<p>
+
+© 2026
+
+<br>
+
+E-Portfolio Language Testing
+
+<br>
+
+Mutmainna • 2401404011
+
+</p>
+
+</footer>
+
+<!-- ======================= -->
+
+<script>
+
+const hidden=document.querySelectorAll(".hidden");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+});
+
+hidden.forEach(el=>observer.observe(el));
+
+</script>
+
+</body>
+
+</html>
+
+<!-- =====================================================
+
+🎉 SELESAI
+
+===================================================== -->
